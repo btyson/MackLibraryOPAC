@@ -1,121 +1,133 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
-<!-- This file last changed: 17 August, 2006 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 29 Apr 2010 -->
 <head>
 <title>Millennium Web Catalog</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="/screens/styles.css" title="default" />
-<!--[if lte IE 8]>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
 
-<link rel="stylesheet" media="all" type="text/css" href="/screens/ie_styles.css" />
-
-<![endif]-->
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 </head>
 <body>
 <!--{toplogo}-->
-<div>
-<div class="folderWrapper"><!-- "folder" interface wrapper div-->
-	<div class="mainSpacer"><!--wrapper div that contains the selection tabs-->
-		<div class="mainActiveTab"><!--active tab-->
-			<b class="tabTop"><b class="active1"></b><b class="active2"></b><b class="active3"></b><b class="active4"></b></b>
-			<div class="DisplayBoxContent"><div class="menuTabActive">Login</div></div>
-		</div><!--close active tab-->
-	</div><!--close selection tab wrapper tabe-->
-	<div class="mainSpacer"><!-- main content wrapper div -->
-		<div class="mainActiveContent">
-<table class="textFix"><tr><td valign="top">
-<div class="pageMainAreaHeader">Web Access Management Login</div>
-<form method="post" class="unpadded">
+<div class="pageContentInner">
+<h1 class="pageHeader">Login</h1>
+<div class="form1Part" id="accessibleForm">
+<form method="post" target="_top" name="patform">
 <!--{iferrmsg}-->
-<span class="errorMessage">
+<span class="errormessage">
 <!--{iferrmsgisPIN}-->
 <!--{newpinmsg}-->
 <!--{else}-->
 <!--{errmsg}-->
 <!--{xif}-->
-</span><br /><br /><br />
+</span>
 <!--{xif}-->
-<table width="100%" class="textFix">
+
+<fieldset>
+<legend>
+<!--{enterinfo}-->
+</legend>
+
+<!--{ifextpat}-->
+<h2>Students, Staff, and Faculty</h2>
+<div class="formEntryArea">
+<label for="extpatid"><span class="formLabel">
+Username:
+</span></label>
+<!--{extpatid}-->
+<label for="extpatpw"><span class="formLabel">
+Password:
+</span></label>
+<!--{extpatpw}-->
+</div>
+<h2>Visitors</h2>
+<!--{xif}-->
+
 <!--{ifneedpatronname}-->
-<tr><td width="30%"></td><td>
-<!--{nameexample}-->
-</td></tr><tr><td>
+<div class="formEntryArea">
 <!--{nameprompt}-->
-</td><td>
 <!--{name}-->
-</td></tr>
+<span class="formLabelExample">
+<!--{nameexample}-->
+</span>
+</div>
 <!--{xif}-->
+
 <!--{ifneedpatronverify}-->
-<tr><td>&nbsp;</td><td>
-<!--{barcodeexample}-->
-</td></tr>
-<tr><td>
+<div class="formEntryArea">
 <!--{barcodeprompt}-->
-</td><td>
 <!--{barcode}-->
-</td></tr>
+<span class="formLabelExample">
+<!--{barcodeexample}-->
+</span>
+</div>
+
 <!--{ifneedspin}-->
+
 <!--{iferrmsgisPIN}-->
-<tr><td colspan="2">
+<p>
 <!--{newpinmsg}-->
-</td></tr><tr><td>
+</p>
+<div class="formEntryArea">
+<!-- <label for="pin1"> -->
+<span class="formLabel">
 <!--{pin1prompt}-->
-</td><td>
+</span>
 <!--{pin1}-->
-</td></tr><tr><td>
+<!-- </label> -->
+</div>
+<div class="formEntryArea">
+<!-- <label for="pin2"> -->
+<span class="formLabel">
 <!--{pin2prompt}-->
-</td><td>
+</span>
 <!--{pin2}-->
-</td></tr>
+<!-- </label> -->
+</div>
+
 <!--{else}-->
-<tr><td></td><td>
-<!--{pininstructions}-->
-</td></tr><tr><td>
+<div class="formEntryArea">
 <!--{pinprompt}-->
-</td><td>
 <!--{pin}-->
-</td></tr>
+<span class="formLabelExample">
+<!--{pininstructions}-->
+</span>
+</div>
+
 <!--{xif}-->
 <!--{xif}-->
 <!--{xif}-->
-</table>
-<br /><br />
+
+    <!--{ifalternate_id}-->
+    <!--{user_name}-->
+    <!--{xif}-->
+
+<div class="formButtonArea">
+<!--{ifneedspin}-->
+<!--{pinresetrequest}-->
+<!--{xif}-->
 <!--{submit}-->
+</div>
+</fieldset>
 </form>
-<!--{startover}-->
-</td></tr></table>
 
+</div>
 
-		</div>
-<div >
-	<b class="conbottom"><b class="conb4"></b><b class="conb3"></b><b class="conb2"></b><b class="conb1"></b></b>
 </div>
-	</div><!--close main content wrapper div-->
-</div><!--close wrapper of "folder interface"-->
-<div class="mainNavLinksWrapper">
-<div class="roundedContent">
-<b class="xtop"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b></b>
-<div class="roundedContentInfo">
-<div align="center"><img src="/screens/welcome.jpg" alt="Welcome to Webpac Pro"/></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/patroninfo">My Record</a></div>
-<!--<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/selfreg">Patron self registration</a></div>-->
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/acquire">Suggest a purchase</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/suggest">Comments</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/screens/libinfo.html">Library Info</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/ftlist">Featured item lists</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/screens/feeds_example.html">Feeds</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/">Search</a></div>
-<!--<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/screens/resources_index.html">Other Resources</a></div>-->
-<!-- Note: uncomment this row and insert the correct URL if library uses KidsOnline product -->
-<!--<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="#">KidsOnline</a></div>-->
-<!-- Note: if library has Web OPACs in alternate language(s), links can be added here -->
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/screens/help_index.html">Help</a></div>
-</div>
-<b class="xbottom"><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></b>
-</div>
-</div>
-</div>
-<div style="clear:both"></div>
 <!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].elements[1].focus(); }
+catch(err) {}
+//--><!]]></script>
 </body>
 </html>

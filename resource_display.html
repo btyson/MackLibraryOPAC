@@ -1,56 +1,83 @@
-<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
-<!-- This file last changed: 20 April, 2006 -->
 <!--{toplogo}-->
-<div class="topDiv">
-	<div>
+
+<div id="bibDisplayBody">
+<div align="center">
 <!--{navrow}-->
-<!--{searchhistory}-->
-		<div style="margin-top:5px">
-			<div id="bibLeft">&nbsp;</div>
-			<div id="bibContent">
-<div class="raised">
-<b class="top"><b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b></b>
-<div class="tool">
+</div> 
+<div id="bibDisplayContent">
+<div class="bibSearch">
 <!--{searchtool}-->
-</div>
-<b class="bottom"><b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b></b>
-</div>
-</div>
-			<div id="bibRight"></div>
-		</div>
-		<div class="clear"></div>
+</div><!-- close tool -->
+<div class="bibHistoryRow">
+<div class="resourceHistory">
+<!--{searchhistory}-->
 </div>
 </div>
-<div style="margin:0 0 0 2px;">
-<div id="infoTable">
-<div style="text-align:right;font-size:85%;padding-right:5px;">
+<div>
 <!--{pager}-->
 </div>
+
+
+<div class="bibClear"></div>
+
+<div class="bibResourceSidebar">
+<!--{ifhasresourcetable}-->
+<!--{resourcetable}-->
+<!--{xif}-->
+<!--Optional INNReach resources.-->
+<!--{innreach}-->
+<!--{relsearch}-->
+</div>
+
+<div class="bibDisplayJacket">
+<!--{bibimage}-->
+<div class="bibMedia">
+<!--{media}-->
+</div>
+</div>
+
+<div class="resourceDisplayContentMain">
+
+
+<!-- table to make display consistent with recordinfo token data -->
+<table width="100%">
+<tr>
+<td class="resourceInfoLabel" align="left" width="30%">
+Resource Home:
+</td>
+<td class="resourceInfoData" align="left" width="70%">
+<!--{resourcelink}-->
+</td>
+</tr>
+</table>
 <!--{recordinfo:#}-->
-<div style="padding:2px 0px 2px 25px;width:95%;">
-<div style="float:left;width:50%">
+
+<!--{ifhaspatrate}-->
+<div class="bibDisplayRatings">
+<!--{ratings}-->
+</div>
+<!--{xif}-->
+
+<div class="bibDisplayPermLink actionButtonArea">
 <!--{recordlink}-->
 </div>
-<div style="float:left;width:50%;font-size:85%;">
-<!--{resourcelink}-->
-</div>
-<div style="clear:both;"></div>
-</div>
-<!--{license}-->
-<!--{bib}-->
-<div style="font-size:85%;padding-right:5px;" align="right">
-<!--{pager}-->
-</div>
-</div>
-<div id="sidebarContent">
-<div id="revandRate">
-<div class="sidecontentHeading">Additional Info:</div>
-<!--{ratings}-->
-<!--{relsearch}-->
-<!--{reslink}-->
-</div>
-</div>
-<div class="clear2"></div>
-</div>
-<!--{botlogo}-->
 
+<div class="resourceDisplayLicenseHeader"><h2>License</h2></div>
+<div class="resourceLicenseArea">
+<!--{license}-->
+</div>
+
+
+<div class="clear"></div>
+<div class="resourceDisplayBibs">
+<!--{bib}-->
+</div>
+
+<!--{relsearch}-->
+
+<!--{reslink}-->
+</div><!-- close resourceDisplayContentMain -->
+</div><!-- close bibDisplayContent -->
+<div class="clear"></div>
+</div><!-- close bibDisplayBody -->
+<!--{botlogo}-->

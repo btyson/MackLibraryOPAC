@@ -1,101 +1,132 @@
-<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
-<!-- This file last changed: 20 April, 2006 -->
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 21 January 2010 -->
 <!--{toplogo}-->
-<div>
-<div id="bibLeft">&nbsp;</div>
-<div id="bibContent">
-<div class="raised">
-<b class="top"><b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b></b>
-<div class="tool">
-<!--{searchtool}-->
-</div>
-<b class="bottom"><b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b></b>
-</div>
-</div>
-<div id="bibRight"></div>
-</div>
-<div class="clear"></div>
 <!--{patron}-->
-<table width="100%" align="center">
-<tr>
-<td align="center" width="35%">
-<div class="patMainFuncs">
-<div class="patStatusLinks">
-<!--{ifholds}-->
-<!--{holdsbtn}-->
-<!--{xif}-->
-
-<!--{ifill}-->
-<!--{illbtn}-->
-<!--{xif}-->
-
-<!--{iffines}-->
-<!--{finesbtn}-->
-<!--{xif}-->
-
-<!--{ifchkouts}-->
-<!--{chkoutsbtn}-->
-<!--{xif}-->
-
-<!--{ifprograms}-->
-<!--{programsbtn}-->
-<!--{xif}-->
-
-<!--{ifbookings}-->
-<!--{bookingsbtn}-->
-<!--{xif}-->
-
-<!--{ifmsgs}-->
-<!--{msgsbtn}-->
-<!--{xif}-->
-</div>
-<div class="patHelpLinks">
-<a href="/screens/help_renew.html">Help with Renewals</a>
-<!--{ifpsearch}-->
-<a href="/screens/help_prefsearch.html">Help with Preferred Searches</a>
-<!--{xif}-->
-</div>
-</div>
-</td>
-<td align="center" width="40%">
+<div class="pat">
+<div class="patFloat">
+<div class="patTop">
 <div class="patNameAddress">
 <!--{ifpatimage}-->
 <!--{patimage}-->
 <!--{xif}-->
 <!--{patroninfo}-->
+</div>  <!--patNameAddress-->
 </div>
-</td>
 
-<td align="left">
+<div class="clear"></div>
+
 <div class="patActionsLinks">
-<!--{ifmodifypin}-->
-<!--{modifypinbtn}-->
+<div id="patActionsLinksList">
+ <!--{ifholds}-->
+<div class="patActionItem" id="patButHolds">
+<div class="button2">
+<!--{holdsbtn}-->
+</div>
+</div>
+ <!--{xif}-->
+<!--{ifill}-->
+<div class="patActionItem">
+<!--{illbtn}-->
+</div>
+<!--{xif}-->
+<!--{iffines}-->
+<div class="patActionItem" id="patButFines">
+<div class="button2">
+<!--{finesbtn}-->
+</div>
+</div>
+<!--{xif}-->
+<!--{ifchkouts}-->
+<div class="patActionItem" id="patButChkouts">
+<div class="button2">
+<!--{chkoutsbtn}-->
+</div>
+</div>
 <!--{xif}-->
 <!--{ifmodifypatinfo}-->
+<div class="patActionItem">
 <!--{modifypatinfobtn}-->
-<!--{xif}-->
-<!--{ifpsearch}-->
-<!--{psearchbtn}-->
-<!--{xif}-->
-<!--{ifmffav}-->
-<!--{mffavbtn}-->
-<!--{xif}-->
-<!--{ifcirchist}-->
-<!--{circhistbtn}-->
-<!--{xif}-->
-<!--{ifpatrate}-->
-<!--{patratebtn}-->
-<!--{xif}-->
-<!--{ifpatreview}-->
-<!--{patreviewbtn}-->
-<!--{xif}-->
 </div>
-</td>
-</tr>
-</table>
+<!--{xif}-->
+<!--{ifprograms}-->
+<div class="patActionItem">
+<!--{programsbtn}-->
+</div>
+<!--{xif}-->
+<!--{ifbookings}-->
+<div class="patActionItem" id="patButBookings">
+<div class="button2">
+<!--{bookingsbtn}-->
+</div>
+</div>
+<!--{xif}-->
+<!--{ifmodifypin}-->
+<div class="patActionItem">
+<!--{modifypinbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifmsgs}-->
+<div class="patActionItem">
+<!--{msgsbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifpsearch}-->
+<div class="patActionItem">
+<!--{psearchbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifmffav}-->
+<div class="patActionItem">
+<!--{mffavbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifcirchist}-->
+<div class="patActionItem">
+<!--{circhistbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifpatrate}-->
+<div class="patActionItem">
+<!--{patratebtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifpatreview}-->
+<div class="patActionItem">
+<!--{patreviewbtn}-->
+</div>
+<!--{xif}-->
+
+<!--{ifmylists}-->
+<div class="patActionItem">
+<!--{mylists}-->
+</div>
+<!--{xif}-->
+
+<!--{ifprogreg}-->
+<div class="patActionItem">
+<!--{progregcal}-->
+</div>
+<!--{xif}-->
+
+<div class="patActionItem">
+<!--{patfeeds}-->
+</div>
+
+</div>
+</div>
+
 <div class="patFuncArea">
 <!--{patfunc}-->
 </div>
+<div class="clear"></div>
+</div> <!--TopContent-->
+</div> <!--pat-->
 <!--{botlogo}-->
 </body>
 </html>

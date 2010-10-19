@@ -1,108 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
-<!-- This file last changed: 17 August, 2006 -->
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 23 Mar 2010 -->
 <head>
 <title>Millennium Web Catalog</title>
-<meta http-equiv="Content-Type" content="text/html" />
-<link rel="stylesheet" href="/screens/styles.css" type="text/css" />
-<!--[if lte IE 8]>
-
-<link rel="stylesheet" media="all" type="text/css" href="/screens/ie_styles.css" />
-
-<![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 </head>
-
-<body onload="document.forms[0].elements[1].focus();">
+<body>
 <!--{toplogo}-->
-<div>
-<!-- to create new tabs copy the tab code:
+<div class="pageContentInner mainSearch">
 
-		<div class="mainActiveTab">
-			<b class="tabTop"><b class="active1"></b><b class="active2"></b><b class="active3"></b><b class="active4"></b></b>
-			<div class="DisplayBoxContent"><div class="menuTabActive">Keyword</div></div>
-		</div>
+<h1 class="accessibleAddInfo">Search</h1>
 
-and insert in correct place.  You may have to adjust the font size and spacing within the style sheet styles.css and ie_styles.css to accomodate additional tabs.
--->
-<div class="folderWrapper"><!-- "folder" interface wrapper div-->
-	<div class="mainSpacer"><!--wrapper div that contains the selection tabs-->
-		<div class="mainActiveTab"><!--active tab-->
-			<b class="tabTop"><b class="active1"></b><b class="active2"></b><b class="active3"></b><b class="active4"></b></b>
-			<div class="DisplayBoxContent"><div class="menuTabActive">Search</div></div>
-		</div><!--close active tab-->
-	</div><!--close selection tab wrapper tabe-->
-	<div class="mainSpacer"><!-- main content wrapper div -->
-		<div class="mainActiveContent">
-<table class="textFix"><tr><td valign="top" width="70%">
-<form class="unpadded" action="/search" method="post" name="search" id="search">
-<!-- search area -->
-<div class="pageMainAreaHeader">Search Local Catalog :</div>
-<!--TIP: the list of indexes here should match the DROP_DOWN web option -->
-<!--TIP: this should be kept in sync with other mainmenu and opacmenu pages on which you've included a search input.-->
-<!--TIP: to add or change the options here, just add or delete the lines between the <option> tags-->
-<!--When adding or removing options, use the index tag for the value attribute of the option-->
-<select name="searchtype">
-<option value="Y" selected="selected">Keyword</option>
-<option value="t">Title</option>
-<option value="a">Author</option>
-<option value="d">Subject</option>
-<option value="c">Call Number</option>
+<div id="accessibleForm" class="form1Part">
+<form action="/search" method="post" name="searchtool" id="search">
+<input type="hidden" id="iiiFormHandle_1">
+
+<!-- Optional legend:
+<fieldset>
+<legend>Type the search term you want to find.</legend>-->
+<div class="formEntryArea">
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="X" selected="selected"> Keyword</option>
+<option value="t"> Title</option>
+<option value="a"> Author</option>
+<option value="d"> Subject</option>
+<option value="h"> Journal Title</option>
+<option value="c"> LC Call #</option>
+<option value="g"> Govt Doc #</option>
+<option value="i"> ISBN/ISSN</option>
+<!--<option value="y"> Resource Name</option> -->
+<!--<option value="m"> Resource Subject</option> -->
 </select>
-<input maxlength="75" name="searcharg" size="40" />
-<select name="SORT">
-<option value="D" selected="selected">Sorted By:</option>
-<option value="D">Date</option>
-<option value="A">Title</option>
-<option value="R">Relevance</option>
-</select>
+<!--{nosort}-->
+<label for="searcharg" class="accessibleAddInfo">Search term</label>
+<input maxlength="75" name="searcharg" size="20" >
+<label for="scope" class="accessibleAddInfo">Location</label>
 <!--{scope}-->
-<br/>
-<input type="image" value="Submit" name="submit" src="/screens/submit.gif" border="0" align="middle" alt="Submit Search" />
+<span class="nowrap formButtonArea">
+
+<!--{submit}-->
+
+<!--<a href="#" onclick="iiiDoSubmit_1();">
+<div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonBlankDiv"><span class="buttonBlankSpan1"><span class="buttonBlankSpan2">Submit</span></span></div></div>
+</a> -->
+</span>
+</div><!-- formEntryArea -->
+<!--</fieldset> optional-->
 </form>
-</td><td valign="top"><div class="roundedContent2">
-<b class="xtop"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b></b>
-<div class="roundedContentInfo">
-<div class="mainContentHead">Other Searches:</div>
-<div>&nbsp;&nbsp;<img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/search/b">Barcode Search</a></div>
-<div>&nbsp;&nbsp;<img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/search/,">Record Number Search</a></div>
-<div>&nbsp;&nbsp;<img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/search/X">Advanced Search</a></div>
-<div>&nbsp;&nbsp;<img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/search/q">Author and Title Search</a></div>
-<div>&nbsp;&nbsp;<img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/search/g">Government Documents</a></div>
-<div>&nbsp;&nbsp;<img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/search/r">Course reserves</a></div>
-<!--<div>&nbsp;&nbsp;<img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/illb">Inter Library Loan</a></div>-->
-</div>
-<b class="xbottom"><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></b>
-</div></td></tr></table>
-		</div>
-<div >
-	<b class="conbottom"><b class="conb4"></b><b class="conb3"></b><b class="conb2"></b><b class="conb1"></b></b>
-</div>
-	</div><!--close main content wrapper div-->
-</div><!--close wrapper of "folder interface"-->
-<div class="mainNavLinksWrapper">
-<div class="roundedContent">
-<b class="xtop"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b></b>
-<div class="roundedContentInfo">
-<div align="center"><img src="/screens/welcome.jpg" alt="Welcome to Webpac Pro"/></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/patroninfo">My Record</a></div>
-<!--<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/selfreg">Patron self registration</a></div>-->
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/acquire">Suggest a purchase</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/suggest">Comments</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/screens/libinfo.html">Library Info</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/ftlist">Featured item lists</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/screens/feeds_example.html">Feeds</a></div>
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/">Search</a></div>
-<!--<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/screens/resources_index.html">Other Resources</a></div>-->
-<!-- Note: uncomment this row and insert the correct URL if library uses KidsOnline product -->
-<!--<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="#">KidsOnline</a></div>-->
-<!-- Note: if library has Web OPACs in alternate language(s), links can be added here -->
-<div><img src="/screens/bullet.gif" alt="Bullet Point"/>&nbsp;<a href="/screens/help_index.html">Help</a></div>
-</div>
-<b class="xbottom"><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></b>
-</div>
-</div>
-</div>
-<div style="clear:both"></div>
+</div><!-- form1Part -->
+
+</div><!--pageContentInner -->
+
+<!--
+Insert your content here!
+-->
+
+
 <!--{botlogo}-->
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+try { document.forms[0].searcharg.focus(); }
+catch(err) {}
+//--><!]]></script>
+
 </body>
 </html>

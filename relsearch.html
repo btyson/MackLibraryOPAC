@@ -1,76 +1,56 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- 2006 WebPAC Pro Version, set from 21 November, 2006 -->
-<!-- This file last changed: 27 June, 2005 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<!-- Rel 2009B Example Set -->
+<!-- This File Last Changed: 11 Feb 2010 -->
 <head>
-<title>Millennium Web Catalog</title>
-<meta http-equiv="Content-Type" content="text/html" />
-<link rel="stylesheet" href="/screens/styles.css" type="text/css" />
-<!--[if lte IE 8]>
+<title>Related Searches</title>
+<script language="JavaScript">
+<!-- Hide the JS
+startTimeout(600000, "/");
+// -->
 
-<link rel="stylesheet" media="all" type="text/css" href="/screens/ie_styles.css" />
-
-<![endif]-->
-</head>
-
+</script>
+<noscript>
+<meta http-equiv="Refresh" content="600;URL=/" />
+</noscript>
+<meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
+<link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 <body>
-<!-- This table is used to create consistent look & feel with main pages of the Web OPAC. Top and bottom logos & navigation are not included in pop-up windows. -->
-<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
-<tr>
-<td  class="pageNavArea">&nbsp;</td>
-</tr>
-</table>
-
-<br />
-
-<!--Begin the main content table-->
-<table width="90%" border="0" cellspacing="0" cellpadding="5" align="center">
-<tr valign="top" class="pageMainArea">
-<td class="pageMainArea">&nbsp;
-<!--Beginning main page content-->
+<div class="minHeight">
+<div class="fullPage">
+<div class="pageContent">
+<div class="pageContentInner popupContentInner">
+<div class="relsearch">
+<h1 class="relSearchHeader">Related Searches</h1>
+<p>Click the related search links below to perform a search for that subject, author or title.</p>
+<p id="formLinks">
 <!--{closewindow}-->
-<br /><br />
-<div id="instructions">Click the related search links below to perform a search for that subject, author or title.</div>
-<br />
-<div id="relsearchsubj">
+</p>
 <!--{ifsubj}-->
-<span class="sectionHeading">Related Subjects:</span>
+<h2>Related Subjects</h2>
 <!--{relsearchsubj}-->
 <!--{else}-->
-<span class="sectionHeading">Related Subjects:</span> none found
+<h2>No related subjects found.</h2>
 <!--{xif}-->
-</div>
-<br />
-<div id="relsearchauth">
 <!--{ifauth}-->
-<span class="sectionHeading">Related Authors:</span>
+<h2>Related Authors</h2>
 <!--{relsearchauth}-->
 <!--{else}-->
-<span class="sectionHeading">Related Authors:</span> none found
+<h2>No related authors found.</h2>
 <!--{xif}-->
-</div>
-<br />
-<div id="relsearchtitle">
 <!--{iftitle}-->
-<span class="sectionHeading">Related Titles:</span>
+<h2>Related Titles</h2>
 <!--{relsearchtitle}-->
 <!--{else}-->
-<span class="sectionHeading">Related Titles:</span> none found
+<h2>No related titles found.</h2>
 <!--{xif}-->
-</div>
+<p id="formLinks">
 <!--{closewindow}-->
-
-<!--End of main page content-->
-</td>
-</tr>
-</table>
-<!--End the main content table-->
-
-<br />
-<!-- This table is used to create consistent look & feel with main pages of the Web OPAC. Top and bottom logos & navigation are not included in pop-up windows. -->
-<table width="100%" border="0" cellspacing="0" cellpadding="2" align="center">
-<tr valign="middle">
-<td align="center" class="pageNavArea">&nbsp;</td>
-</tr>
-</table>
+</p>
+</div><!--relsearch -->
+</div><!--popupContentInner -->
+</div><!--pageContent -->
+</div><!--fullPage -->
+</div><!--minHeight -->
 </body>
 </html>
