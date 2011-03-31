@@ -5,3 +5,6 @@
 
 /*.topLogo { height:120px; background-image:url(logo_lg.jpg); background-repeat:no-repeat; background-position:9px 9px; }*/
 .topLogo { height:97px; background: #7194BE; background-image:url(logo_lg.jpg); background-repeat:no-repeat;  }
+
+.facebook-badge { clear:both; float:right; margin:10px 15px 20px auto; }
+.facebook-badge img {border:0;}

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>JS Mack Library Search</title>
+<link href="/screens/styles.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="JavaScript" type="text/javascript">
+// Courtesy of SimplytheBest.net - http://simplythebest.net/scripts/
+<!--
+function goSelect(daform) {
+with(daform) {
+top.window.location=options[selectedIndex].value;       // jump to that option's value
+}
+}
+//-->
+</script>
+</head>
+<body onload="document.search.searcharg.focus()"> 
+<div id="container"> 
+  <div id="header"> 
+    <h1>J.S. Mack Library - Bob Jones University</h1> 
+  </div> 
+  <hr class="hide" /> 
+  <div id="topnav"> 
+    <ul> 
+	  <li><a href="/">Catalog Home</a></li> 
+      <li id="curpage"><a href="http://www.bju.edu/library/home.html">Library Home</a></li> 
+      <li><a href="/search/X">Advanced Search</a></li> 
+      <li><a href="/screens/help_index.html">Help</a></li> 
+    </ul> 
+  </div> 
+  <div id="content"> 
+    <form class="unpadded" action="/search/a?a" name="search" id="search"> 
+      <div id="contentnav"> 
+        <div class="innerbox"> 
+          <div class="white_column"> 
+            <p align="center" class="bigred">Search Options</p> 
+            <p class="blue"> View the Entire Collection or search through a specific collection.
+			</p><p><!--{nosort}-->
+<!--{scope}-->
+
+               </p> 
+          </div> 
+        </div> 
+      </div> 
+      <h2>Search Local Catalog</h2> 
+      <p>Search the library's holdings for books, digital
+        records, images, periodicals, and more.</p> 
+      <fieldset> 
+        <legend>Search By:</legend> 
+    
+		<!--<input type="hidden" name="searchtype" value="Y" /> -->
+		<select name="searchtype">
+		  <option value="Y" selected="selected">Keyword</option>
+		  <option value="t">Title</option>
+		  <option value="a">Author</option>
+		  <option value="d">Subject</option>
+		  <option value="c">Call Number</option>
+		  <option value="i">ISBN</option>
+		</select>
+        <input maxlength="75" name="searcharg" size="25" /> 
+
+		<input type="image" align="top" value="Submit" name="submit" src="/screens/go_button.gif" alt="Submit Search" /> 
+      </fieldset> 
+      <!--<ul name="searchtype" id="searchoptions"> 
+        <li id="cursearch"><a href="/search/Y">Keyword</a></li> 
+        <li><a href="/search/a">Author</a></li> 
+        <li><a href="/search/t">Title</a></li> 
+        <li><a href="/search/d">Subject</a></li> 
+        <li><a href="/search/c">Call Number</a></li> 
+      </ul> -->
+    </form> 
+	<p class="note">For Author/Title Search, click the Advanced Search Tab.</p>
+    <div id="contentbox"> 
+	<div class="innerbox">
+      <table bgcolor="#FFFFFF" width="100%" cellpadding="0" cellspacing="0"> 
+            <tr> 
+              <td valign="top" width="50"><!--<img src="/screens/magnifying.gif" border="0" align="left" alt="Search" />--></td> 
+              <td valign="top">
+                <h4> <a href="/screens/course.html">Course Reserves</a></h4>
+                <ul>
+				  <li><a href="/screens/resources_index.html">Search by Professor</a></li> 
+				  <li><a href="/screens/resources_index.html">Search by Course Name</a></li> 
+                </ul></td> 
+              <td valign="top" align="left">
+			  <h4>Other Resources</h4>
+			  <ul>
+				 <li><a href="#">Library Map</a></li>
+               <!--<img src="/screens/book.gif" align="left" border="0" alt="My Library" />-->
+                <li><a href="/screens/resources_index.html">Other Libraries</a></li>
+				<li><a href="/ftlist.html">Featured Items List</a></li>
+				</ul>
+			  </td> 
+            </tr> 
+          </table> 
+       </div> 
+    </div> 
+  <p align="center" class="InnovativeCredit">Powered by <a href="http://www.iii.com" target="_blank">Innovative
+        Interfaces, Inc.</a> 2003</p> 
+  </div> 
+  <hr class="hide" /> 
+  <div id="footer">&copy; 2004 Bob Jones University</div> 
+  <div id="sidenav"> 
+    <dl> 
+      <dt>Find Information</dt> 
+      <dd> 
+        <ul> 
+	<li><a class="main" href="http://www.bju.edu/library/collections/music.html">Music Library</a></li>
+          <li><a class="main" href="http://158.158.239.51:81/">Fundamentalism File</a></li> 
+          <li><a class="main" href="/screens/course.html">Course Reserves</a></li> 
+          <li><a class="main" href="http://www.bju.edu/library/resources/index.html">Electronic Resources</a></li> 
+	<li><a class="main" href="http://www.bju.edu/library/research-helps/">Research Helps</a></li>
+          <li><a class="main" href="/screens/ill.html">Inter-Library Loan</a></li> 
+        </ul> 
+      </dd> 
+      <dt>My Library</dt> 
+      <dd> 
+        <ul> 
+          <li><a class="main" href="/patroninfo.html">View My Account</a></li> 
+          <li><a class="main" href="/acquire_web.html">Suggest a Purchase</a></li> 
+          <li><a class="main" href="/suggestion.html">Make a Suggestion</a></li> 
+		  <li><a class="main" href="http://www.bju.edu/library/ask/index.html">Ask a Librarian</a></li> 
+        </ul> 
+      </dd> 
+    </dl> 
+  </div> 
+</div>
+</body>
+</html>
+

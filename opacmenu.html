@@ -1,14 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <!-- Rel 2009B Example Set -->
-<!-- This File Last Changed: 11 June 2010 -->
+<!-- Updated: 09 June 2010 -->
 <head>
-<title>Millennium Web Catalog</title>
+<title>J.S. Mack Library at Bob Jones University</title>
 <meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
 <link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
+<link rel="stylesheet" type="text/css" href="/screens/stylesmain.css" > <!--Necessary to offer a larger logo on mainmenu. Also set in the INSERTTAG_INHEAD wwwoption to display this logo across the catalog-->
 </head>
 <body>
 <!--{toplogo}-->
+
 <div class="pageContentInner mainSearch">
 
 <h1 class="accessibleAddInfo">Search</h1>
@@ -16,6 +18,8 @@
 <div id="accessibleForm" class="form1Part">
 <div class="browseSearchtool">
 <form action="/search/" method="get" name="search" id="search">
+
+
 <input type="hidden" id="iiiFormHandle_1">
 
 <!-- Optional legend:
@@ -26,10 +30,12 @@
 <select name="searchtype" id="searchtype">
 <option value="X" selected="selected">Keyword</option>
 <option value="t">Title</option>
-<option value="s">Journal Title</option>
+<!--option value="s">Journal Title</option-->
 <option value="a">Author</option>
 <option value="d">Subject</option>
-<option value="y">Resource Name</option>
+<option value="c">Call Number</option>
+<option value="i"> ISSN/ISBN</option>
+<!--option value="y">Resource Name</option-->
 </select>
 <!--{nosort}-->
 <label for="searcharg" class="accessibleAddInfo">Search term</label>
@@ -63,21 +69,10 @@ obj.submit();
 
 <div class="mainMenuContent">
 <div class="mainMenuContentLeft">
-<img src="/screens/main.jpg" height=355 width=355>
+<img src="/screens/main.jpg">
 </div>
 <div class="mainMenuContentRight">
-<ul>
-<li><a href="http://library.bju.edu">Mack Library</a></li>
-<li><a href="http://www.bju.edu/library/collections/music.html">Music Library</a></li>
-<li><a href="http://158.158.239.51:81/">Fundamentalism File</a></li>
-<li><a href="http://158.158.239.51:82/">BJU Archives</a></li>
-<li><a href="http://library.bju.edu/screens/course.html">Course reserves</a></li>
-<li><a href="http://www.bju.edu/library/resources/index.html">Electronic resources</a></li>
-<li><a href="http://www.bju.edu/library/research-helps/">Research helps</a></li>
-<li><a href="http://www.bju.edu/library/services/ill_form.php">Interlibrary loan</a></li>
-<li><a href="http://library.bju.edu/ftlist.html">New books and featured lists</a></li>
-<li><a href="http://library.bju.edu/patroninfo">View My Account</a></li>
-</ul>
+<iframe height="355" width="230" frameBorder="0" src="http://www.bryantyson.net/news.html">Looks like your browser does not support IFRAMEs. You can visit the library news page at http://www.bryantyson.net/news.html</iframe>
 </div>
 </div>
 
@@ -88,6 +83,5 @@ obj.submit();
 try { document.forms[0].searcharg.focus(); }
 catch(err) {}
 //--><!]]></script>
-
 </body>
 </html>

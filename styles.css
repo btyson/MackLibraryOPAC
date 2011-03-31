@@ -40,6 +40,8 @@ For 10pt, apply .7353em
 
 body { background:url(background.gif) 2% 0% repeat-x #4D4D4D; color: #444444; font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-size:85%; font-style:normal; font-weight: normal; height:100%; text-align:center; width:100%; margin-top:0px; }
 
+body.iframe { background:#FFFFFF }
+
 /* Generated popup body */
 body > font { background:#FFFFFF; width:94%; padding:30px 50px 240px; margin-bottom:-64px; font-size:1em; }
 
@@ -150,6 +152,9 @@ a:hover  { color: #7C14B8; }
 
 #bibDisplayBody .bibVol a:link, #bibDisplayBody .bibVol a:visited { font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; }
 
+#bibDisplayBody .rateData a:link, #bibDisplayBody .rateData a:visited
+{padding:0; }
+
 .bibDisplayContent { padding:10px 0 10px 10px; }
 
 .bibDisplayContentMain, .resourceDisplayContentMain  { float:left; width:59%; margin-left:1.5em; display:inline; }
@@ -176,13 +181,17 @@ a:hover  { color: #7C14B8; }
 
 .bibDisplayItemsMain, .resourceLicenseArea { float:right; width:80%; }
 
-.bibDisplayJacket  { float:left; margin:0 0 1em 5%; display:inline; width:6em; }
+.bibDisplayJacket  { float:left; margin: 0px 100px 0px 5px; display:inline; width:6em; }
 
-.bibLinks th { text-align:center; }
+.bibLinks table { border:1px solid black; }
+
+.bibLinks th { border:1px solid black ; text-align:center; font-size:1.5em; }
+
+.bibLinks td { border:1px solid black; text-align:center; font-size:1.3em; }
 
 .bibMedia  { margin-left:auto; margin-right:auto; }
 
-.bibMedia   img { margin-top:10px;  }
+.bibMedia img { margin-top:10px;  }
 
 .bibDisplayPermLink { float:right; }
 
@@ -200,7 +209,7 @@ table.bibItems { clear:both; }
 
 .bibItems  th { text-align:left; }
 
-.bibItemsEntry td { padding:0; margin:0; }
+.bibItemsEntry td { text-align:left; padding:0; margin:0; }
 
 .bibItems { border:none; }
 
@@ -244,9 +253,10 @@ table.bibResourceTable { border:0; }
 
 .bibSearchToolMessage { margin-bottom:5px; }
 
-.bibSearchHistory, .resourceHistory { position:absolute; right:24px; top:36px; }
-
+/*.bibSearchHistory, .resourceHistory { position:absolute; right:240px; top:180px; } absolute positioning does not work because sooner or later it interferes with elements around it*/
 .bibSearchHistory { font-size:0.83333em; }
+
+.bibSearchHistory { font-size:0.8824em; }
 
 .bibSearchHistory select, .resourceHistory select  { width:200px; }
 
@@ -310,7 +320,8 @@ table.bibResourceTable { border:0; }
 
 .briefcitMediaEnd { display:none; }
 
-.briefcitJacket  { float:left; margin:5px 15px; width:80px; display:inline; }
+.briefcitJacket  { float:left; margin: 0px 120px 0px 5px; display:inline; 
+width:6em; }
 
 .briefcitStatus { font-weight:bold; }
 
@@ -592,9 +603,9 @@ div .bibResourceSidebar { display:none; }
 
 .itemSelect form > input { margin:8px 0 0; }
 
-.libinfoLeft { float:left; margin:0 20px 0 2px; }
+.libinfoLeft { float:left; margin-right:15px; margin-top:45px; margin-bottom:45px; }
 
-.libinfoRight { float:left; }
+.libinfoRight { float:left; margin-top:45px; margin-bottom:45px; }
 
 .libinfoRight ul { padding-left:15px; }
 
@@ -612,9 +623,9 @@ div .bibResourceSidebar { display:none; }
 
 .mainMenuContent { margin-top:45px; text-align:left; }
 
-.mainMenuContentLeft { float:left; margin-right:15px; margin-left:30px; }
+.mainMenuContentLeft { float:left; margin-right:15px; margin-left:0; margin-bottom:45px; }
 
-.mainMenuContentRight { float:left; }
+.mainMenuContentRight { float:left; margin-bottom:45px; }
 
 .mainMenuContentRight ul { list-style:none; padding:0px; }
 
@@ -650,7 +661,7 @@ div .bibResourceSidebar { display:none; }
 
 .navigationRow noscript h2, .bibSearchHistory noscript h2 { font-size:1em; margin:-3px 10px 0 0; color:#FF0000; }
 
-.navigationRow select, .navigationrow option { position:absolute; right:24px; top:48px; }
+.navigationRow select, .navigationrow option { vertical-align: middle; /*position:absolute; right:24px; top:48px;*/ } /* removed to place search history dropdown with the navigation controls rather than in the toplogo area */
 
 .navigationRow select { font-size:.83333em; width:200px; }
 
@@ -927,7 +938,7 @@ div.rssChannelEntries { border:none; background:#FFFFFF; }
 
 #topMyLibraryList { width: 100%; }
 
-/*#topMyLibraryHeader h1 {  color: #767C70; display: inline; float:left; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-size: .9167em; margin:0; padding:6px 10px 3px 10px; text-decoration:none; width:auto; } */
+/* #topMyLibraryHeader h1 {  color: #767C70; display: inline; float:left; font-family:Arial,"Arial Unicode MS",Helvetica,Verdana,sans-serif; font-size: .9167em; margin:0; padding:6px 10px 3px 10px; text-decoration:none; width:auto; } */
 #topMyLibraryHeader h1 { position:absolute; left:-9999px; line-height:0px; }
 
 /*Toplogo optional dropdown menus*/
@@ -1018,9 +1029,3 @@ tr.highlight { background:#FFFFE4; }
 .wblinkdisplay form { margin-bottom:8px; }
 
 .wbnoresources { display:block; margin: 3px 0; }
-
-/* Section 4 */
-/* styles for 2009B design */
-
-.topLogoSmall { visibility:hidden; }
-.topLogo { height:97px; background: #7194BE; background-image:url(logo_lg.jpg); background-repeat:no-repeat;  }
