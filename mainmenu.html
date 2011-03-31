@@ -7,6 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=8;FF=3;OtherUA=4"><meta http-equiv="Content-type" content="text/html;charset=UTF-8" >
 <link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 <link rel="stylesheet" type="text/css" href="/screens/stylesmain.css" > <!--Necessary to offer a larger logo on mainmenu. Also set in the INSERTTAG_INHEAD wwwoption to display this logo across the catalog-->
+<link rel="stylesheet" type="text/css" href="/screens/custom.css" > <!--Includes custom CSS for BJU customizations-->
 </head>
 <body>
 <!--{toplogo}-->
@@ -68,11 +69,19 @@ obj.submit();
 </div><!-- form1Part -->
 
 <div class="mainMenuContent">
+<!-- LibGuides embed code -->
+<div class="LibGuidesEmbed">
+  <h1>Recent LibGuides</h1>
+  <div id='api_search_guides_iid474'></div><script type='text/javascript' src='http://api.libguides.com/api_search.php?iid=474&type=guides&limit=5&more=false&desc=on&sortby=pubdate&context=object&format=js'> </script>
+  <p><div id='api_searchbox_iid474'></div><script type='text/javascript' src='http://api.libguides.com/api_searchbox.php?iid=474&context=object&format=js'> </script></p>
+</div>
+<!-- end LibGuides embed code -->
 <div class="mainMenuContentLeft">
 <img src="/screens/main.jpg">
 </div>
 <div class="mainMenuContentRight">
-<iframe id="iframe1" height="355" width="230" frameBorder="0" style="background-color:#FFFFFF" src="/screens/news.html">
+<!--iframe id="iframe1" height="355" width="230" frameBorder="0" style="background-color:#FFFFFF" src="/screens/news.html"-->
+<iframe id="iframe1" height="355" width="200" frameBorder="0" style="background-color:#FFFFFF" src="/screens/news.html">
 Looks like your browser does not support iframes. You can visit the library news page at http://library.bju.edu/screens/news.html</iframe>
 </div>
 </div>
