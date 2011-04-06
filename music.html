@@ -17,6 +17,7 @@ startTimeout(600000, "/");
 <link rel="stylesheet" type="text/css" href="/screens/styles_print.css" media="print">
 <link rel="stylesheet" type="text/css" href="/screens/stylesmain.css" > <!--Necessary to offer a larger logo on mainmenu. Also set in the INSERTTAG_INHEAD wwwoption to display this logo across the catalog-->
 <style type="text/css">
+p {text-align:left}
 td.header {color:#000000; background-color:#D3D3D3; font-weight:bold; text-align:center; padding: 10px}
 td.even {color:#000000; background-color:#FFFFFF; padding: 5px}
 td.odd {color:#000000; background-color:#D3D3D3; padding: 5px}
@@ -26,13 +27,79 @@ td.sunday{color:#000000; background-color:#D3D3D3; text-align:center; padding: 5
 <body>
 <!--{toplogo}-->
 
-<div class="pageContentInner">
+<div class="pageContentInner mainSearch">
 
-<div class="libinfoLeft">
+<!-- Attempting to add search box with scope set to Music Library -->
+
+<div id="accessibleForm" class="form1Part">
+<div class="browseSearchtool">
+<form action="/search/" method="get" name="search" id="search">
+
+
+<input type="hidden" id="iiiFormHandle_1">
+
+<!-- Optional legend:
+<fieldset>
+<legend>Type the search term you want to find.</legend>-->
+<div class="formEntryArea">
+<label for="searchtype" class="accessibleAddInfo">Search type</label>
+<select name="searchtype" id="searchtype">
+<option value="X" selected="selected">Keyword</option>
+<option value="t">Title</option>
+<!--option value="s">Journal Title</option-->
+<option value="a">Author</option>
+<option value="d">Subject</option>
+<option value="c">Call Number</option>
+<option value="i"> ISSN/ISBN</option>
+<!--option value="y">Resource Name</option-->
+</select>
+<!--{nosort}-->
+<label for="searcharg" class="accessibleAddInfo">Search term</label>
+<input maxlength="75" name="searcharg" size="20" >
+<label for="scope" class="accessibleAddInfo">Location</label>
+
+<!-- insert scope token here for normal scope combo box. This is manually set for music library scope -->
+<label for="searchscope" style="display:none;">Search Scope</label><select name="searchscope" id="searchscope">
+<option value="1"> Mack Library</option> <option value="2"> Music Library</option> <option value="3"> Art Library</option> <option value="4"> Seminary Library</option> <option value="5"> Periodicals</option> <option value="6"> Archives</option> <option value="7" selected="selected"> Music Library </option> </select>
+<!-- end insert scope token here -->
+
+<span class="nowrap formButtonArea">
+
+  <!--{submit}-->
+
+<script language="javascript">
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+obj.submit();
+}
+</script>
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><div onmousedown="this.className='pressedState';" onmouseout="this.className='';" onmouseup="this.className='';"><div class="buttonSpriteDiv"><span class="buttonSpriteSpan1"><span class="buttonSpriteSpan2">Submit</span></span></div></div></a>
+
+<input type="submit" style="display:none">
+
+</span>
+</div><!-- formEntryArea -->
+<!--</fieldset> optional-->
+</form>
+</div><!-- browseSearchtool -->
+</div><!-- form1Part -->
+
+<!-- end Attempting to add search box with scope set to Music Library -->
+<div style="width:800px; clear:both; margin-left:auto; margin-right:auto;">
+
+<table>
+
+<tr>
+<td>
 <img src="/screens/gfac-outside.jpg" alt="Gustafson Fine Arts Center exterior">
-</div><!-- libinfoLeft -->
+</td>
 
-<div class="libinfoRight">
+<td>
+
 <h1 style="color:#1367A7">Music Library</h1>
 
 <table border="1" width="425" style="clear:right">
@@ -66,8 +133,12 @@ td.sunday{color:#000000; background-color:#D3D3D3; text-align:center; padding: 5
 </td>
 </tr>
 </table>
-</div><!-- libinfoRight -->
-<div style="width:800px; clear:both">
+
+
+</td>
+</tr>
+</table>
+
 <p>
  The Music Library branch of the J. S. Mack Library is located on the first floor of the speech wing of the Gustafson Fine Arts Center. This new location was incorporated into the renovation and construction of the Fine Arts Center in 1999 and increased the Music Library's space to over 3,500 square feet. The new library facilities incorporate modern technology and listening equipment.
 </p>
@@ -91,12 +162,13 @@ Please do not use the Music Library equipment to listen to personal recordings.
 <p>
 There are many listening stations in the Music Library where patrons can listen to CDs, cassettes, and records of library materials. In general, only grad students, faculty, staff, and graduate assistants may check out recordings.
 </p>
+<p>
 The chart below lists what may be borrowed by each type of patron.
 </p>
 </div><!-- width:800px; clear:both -->
 
-<div class="libinfoRight">
-<table width="100%" border="1" cellspacing="1" cellpadding="4" style="border:1px solid #000000"> 
+<div class="libinfoRight" style="width:100%; margin-left:auto; margin-right:auto;">
+<table border="1" style="width:70%; margin-left:auto; margin-right:auto; border:1px solid #000000; padding:2px;"> 
             <tr bgcolor="#FFFFFF"> 
               <td colspan="6" style="font-weight:bold; text-align:center">Borrower Privileges</td> 
             </tr> 
@@ -214,7 +286,7 @@ The chart below lists what may be borrowed by each type of patron.
           </table>
 </div><!-- libinfoRight -->
 
-<div style="width:800px; clear:both">
+<div style="width:800px; margin-left:auto; margin-right:auto; clear:both">
 <h2 style="color:#1367A7">Community Borrowing Privileges</h2>
 <p>
 Patrons from outside BJU are welcome to use the Library. Special permission or appointments are not necessary. Patrons not affiliated with the University who desire to check out materials must have a Town Patron borrowing card. As a general rule, residents of the greater Greenville area (within 30 miles of BJU) may be issued a Town Patron borrowing card. Current members of the BJU Alumni Association may check out books while staying in the area. If you would like to be issued a Town Patron borrowing card, but you are not sure if you qualify, contact <a href="mailto:cdoucett@bju.edu">Christy Doucette, Circulation Coordinator</a> at the Mack Library.
@@ -241,6 +313,6 @@ All patrons, except University faculty/staff, are fined $.10 per day for each ov
 
 
 <!--{botlogo}-->
-<!-- Last revised 11/15/2010 by Bryan Tyson and Carole Eby -->
+<!-- Content last revised 11/15/2010 by Bryan Tyson and Carole Eby -->
 </body>
 </html>

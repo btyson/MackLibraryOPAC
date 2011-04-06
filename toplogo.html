@@ -28,8 +28,7 @@
 
 </div><!--topLogo-->
 
-<!-- begin test -->
-<div style="margin-top:20px; height:60px; background-color:#D3D3D3; clear:both;">
+<div style="margin-top:20px; height:60px; background-color:#FFFFFF; clear:both;">
 <p style="margin-left:5px; margin-right:5px; text-align:center;">
 <a href="http://library.bju.edu">Mack Library</a>  |  <a href="/screens/music.html">Music Library</a>  |  <a href="http://library.bju.edu:81/">Fundamentalism File</a>  |  <a href="http://library.bju.edu:82/">BJU Archives</a>  |  <a href="/screens/course_display.html">Course reserves</a>  |  <a href="http://www.bju.edu/library/resources/index.html">Electronic resources</a> | <a href="http://libguides.bju.edu">LibGuides</a>
 </p>
@@ -37,7 +36,6 @@
 <a href="/screens/research-helps.html">Research helps</a>  |  <a href="http://www.pascalcat.org">PASCAL catalog</a> | <a href="/screens/ill.html">Interlibrary loan</a>  |  <a href="/ftlist.html">New books and featured lists</a>  |  <a href="/patroninfo">View My Account</a>  |  <a href="http://www.bju.edu/library/ask/index.html">Ask a librarian</a>
 </p>
 </div>
-<!-- end test -->
 
 
 <div class="topMyLibrary">
@@ -120,23 +118,32 @@ return false;
 } 
 // -->
 </script>
+
 <div id="searchNavMenu">
+<table style="margin: auto;">
+<tr>
+<td style="padding:15px;"><font style="color: #FFFFFF; font-size:1.4em;">Advanced keyword &amp; special searches</font></td>
+<td style="padding:15px;">
 <select name="specializedSearch" id="specializedSearch">
 <option selected="selected" value=" ">(More Searches)</option>
 <option value="/search/X">Advanced Keyword</option>
+<option value="/search/q">Author and Title</option>
 <option value="/search/t">Title</option>
-<option value="/search/s">Journal Title</option>
+<!-- <option value="/search/s">Journal Title</option> -->
 <option value="/search/a">Author</option>
 <option value="/search/d">Subject</option>
-<option value="/search/y">Resource Name</option>
+<!-- <option value="/search/y">Resource Name</option> -->
 <option value="/search/c">Call Number</option>
 <option value="/search/i">ISBN</option>
 <option value="/search/g">Government Document #</option>
-<option value="/search/q">Author and Title</option>
 <!--<option value="/search/p">Instructor</option>
 <option value="/search/r">Course</option> -->
 </select>
+
 <input type="image" src="/screens/ico_go.gif" class="searchNavBut" value="Go" onclick="GotoURL();" >
+</td>
+</tr>
+</table>
 </div>
 
 </div><!--searchNav-->
