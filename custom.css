@@ -10,6 +10,7 @@
 
 .mainMenuContent {
 	width: 850px;
+	overflow: hidden;
 }
 
 .mainMenuContentLeft {
