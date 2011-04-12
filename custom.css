@@ -16,3 +16,7 @@
 .mainMenuContentLeft {
 	margin-left: 15px;
 }
+
+#toplogoMoreNav>li>div>a:link, #toplogoMoreNav>li>div>a:visited {
+	padding: 13px 15px 0 15px;
+}
