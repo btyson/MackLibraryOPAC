@@ -29,12 +29,7 @@
 </div><!--topLogo-->
 
 <div class="topMyLibrary">
-<div id="topMyLibraryHeader"><h1>My Library</h1></div>
-<!--<ul id="topMyLibraryList">
-<li><a href="/acquire">Suggest a purchase</a></li>
-<li><a href="/suggest">Leave Comments</a></li>
-</ul> -->
-
+<!--div id="topMyLibraryHeader"><h1>My Library</h1></div-->
 <ul id="toplogoMoreNav">
 <!-- Toplogo alt links. -->
 <!--<li><a href="/acquire">Suggest a purchase</a></li>
@@ -47,22 +42,37 @@
 		<ul>
             <li><a href="/patroninfo">My Account</a></li>
             <!--<li><a href="/selfreg">Create an account</a></li> -->
+            <li><a href="http://www.pascalcat.org">PASCAL catalog</a></li>
+            <li><a href="/screens/ill.html">Interlibrary loan</a></li>
+            <li><a href="/ftlist.html">New books and featured lists</a></li>
             <li><a href="/libinfo">About the library</a></li>
             <li><a href="/acquire">Suggest a purchase</a></li>
+            <li><a href="http://www.bju.edu/library/ask/index.html">Ask a librarian</a></li>
             <li><a href="/suggest">Comments</a></li>
 		</ul>
 	</li>
+  
+  <!--<li>
+    <div><a href="http://libguides.bju.edu">LibGuides</a></div>
+  </li>
 
+  <li>
+    <div><a href="http://www.bju.edu/library/resources/index.html">Electronic resources</a></div>
+  </li>
+  
+  <li>
+    <div><a href="/screens/course_display.html">Course reserves</a></div>
+  </li>-->
+  
 	<li>
-		<div><a href="">Help Topics</a></div>
+		<div><a href="">Help</a></div>
 		<ul>
-			<li><a href="/help#searching">Searching</a></li>
+			<li><a href="/screens/research-helps.html">Research helps</a></li>
+        <li><a href="/help#searching">Searching</a></li>
 			<li><a href="/help#searchtips">Advanced Keyword Search Tips</a></li>
 			<li><a href="/help#prefsearch">Saving your searches</a></li>
 			<li><a href="/help#renewals">Renewals</a></li>
-			<li><a href="/help#feepay">Fee Payment</a></li>
-			<li><a href="/help#rpro">Research Pro</a></li>
-			<li><a href="/help#programs">Library Events and Community Programs</a></li>
+			
 		</ul>
 	</li>
 <!--
@@ -79,7 +89,7 @@
 	</li> -->
 <!-- End dropdown menus -->    
     
-</ul>
+</ul><!-- toplogoMoreNav -->
 
 <script type="text/javascript"><!--//--><![CDATA[//><!--
 
@@ -114,19 +124,30 @@ return false;
 } 
 // -->
 </script>
+
 <div id="searchNavMenu">
+    <div class="searchNavLinks">
+      <a href="/">Mack Library</a> | 
+      <a href="/screens/music.html">Music Library</a> | 
+      <a href="http://library.bju.edu:81/">Fundamentalism File</a> | 
+      <a href="http://library.bju.edu:82/">BJU Archives</a> | 
+      <a href="http://libguides.bju.edu">LibGuides</a> | 
+      <a href="http://libguides.bju.edu/online-resources/">Online resources</a> | 
+      <a href="/screens/course_display.html">Course reserves</a>
+    </div>
+
 <select name="specializedSearch" id="specializedSearch">
 <option selected="selected" value=" ">(More Searches)</option>
 <option value="/search/X">Advanced Keyword</option>
+<option value="/search/q">Author and Title</option>
 <option value="/search/t">Title</option>
-<option value="/search/s">Journal Title</option>
+<!-- <option value="/search/s">Journal Title</option> -->
 <option value="/search/a">Author</option>
 <option value="/search/d">Subject</option>
-<option value="/search/y">Resource Name</option>
+<!-- <option value="/search/y">Resource Name</option> -->
 <option value="/search/c">Call Number</option>
 <option value="/search/i">ISBN</option>
 <option value="/search/g">Government Document #</option>
-<option value="/search/q">Author and Title</option>
 <!--<option value="/search/p">Instructor</option>
 <option value="/search/r">Course</option> -->
 </select>

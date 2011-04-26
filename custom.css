@@ -30,3 +30,24 @@
 .searchNavLinks a {
 	color: wheat;	
 }
+
+.bibResourceSidebar {
+	background: none;
+}
+
+#googlebooks p {
+	color: #767C70;
+	display: block;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+	font-weight : normal;
+}
+
+#googlebooks img {
+	border: 0;
+	display: block;
+	margin: 15px auto 5px auto;
+	vertical-align: middle;
+ }

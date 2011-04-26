@@ -33,6 +33,8 @@
 <!--Optional INNReach resources.-->
 <!--{innreach}-->
 <!--{relsearch}-->
+
+<div id="googlebooks"></div>
 </div>
 
 <div class="bibDisplayJacket">
@@ -100,4 +102,89 @@
 </div><!-- close bibDisplayContent -->
 <div class="clear"></div>
 </div><!-- close bibDisplayBody -->
+<!--Example of googlebook search: http://library.bju.edu/record=b1356535--> 
+<script type='text/javascript'> 
+    var ProcessResults = function(bookInfo) {
+        var buttonImg = 'http://www.google.com/intl/en/googlebooks/images/gbs_preview_button1.gif';
+        var textGBS = "";
+        for (oclc in bookInfo) {
+            var b = bookInfo[oclc];
+            //form the text of Google Book contents
+            if (b && (b.preview == "full")) {
+                textGBS = "Full Text";
+                //"Google Book Search";
+                document.getElementById("googlebooks").innerHTML = "<a href='" + b.preview_url + "' target='blank'><img src='" + buttonImg + "' alt='Preview' title='Preview'><p>" + textGBS + "</p></a>";
+            }
+            else if (b && (b.preview == "partial")) {
+                textGBS = "Preview"
+                //"Preview at Google Book Search";
+                document.getElementById("googlebooks").innerHTML = "<a href='" + b.preview_url + "' target='blank'><img src='" + buttonImg + "' alt='Preview' title='Preview'><p>" + textGBS + "</p></a>";
+            }
+            else {
+                document.getElementById("googlebooks").innerHTML = "";
+            }
+    }
+}
+</script>
+<!-- begin "Cite This" script from IUG list.  Nathan Landis version, modified by Andrew Welch, modified and added by drg --> 
+<script type="text/javascript"> 
+try {
+    var tr = document.getElementsByTagName('TR');
+    var otherlib_title = "",
+    otherlib_isbn = "";
+    for (i = 0; i < tr.length; i++) {
+        var x = tr[i].getElementsByTagName('TD');
+        if (x.length == 2 && x[0].innerHTML == "OCLC") {
+            otherlib_title = x[1].innerHTML.replace(/(<([^>]+)>)/ig, "");
+            //get oclc;
+            otherlib_title = otherlib_title.replace(/ /g, "");
+            //take out spaces if any;
+            otherlib_title = otherlib_title.replace(/[\n\t]/ig, "");
+            //take out newline;
+
+        }
+        else if (x.length == 2 && x[0].innerHTML == "ISBN") {
+            otherlib_isbn = x[1].innerHTML.replace(/(<([^>]+)>)/ig, "");
+            //get isbn field;
+            otherlib_isbn = otherlib_isbn.replace(/^([0-9xX]+[^0-9xX]).*$/igm, "$1");
+            //strip out non-isbn data;
+            otherlib_isbn = otherlib_isbn.replace(/ /g, "");
+            //take out spaces if any;
+            otherlib_isbn = otherlib_isbn.replace(/[\n\t]/ig, "");
+            //take out newline;
+        }
+    }
+} catch(e) {}
+
+// begining of Google Books
+var oclcnumber = otherlib_title;
+var isbnnumber = otherlib_isbn;
+//alert (oclcnumber);
+if (oclcnumber.length > 0) {
+    var cburl = "http://books.google.com/books";
+    // Retrieve the info for these bibkeys
+    var api_url = cburl + "?jscmd=viewapi&bibkeys=OCLC:" + oclcnumber;
+    var s = document.createElement("script");
+    s.setAttribute("type", "text/javascript");
+    //alert("searching for: " + oclcnumber);
+    s.setAttribute("src", "http://books.google.com/books?jscmd=viewapi&bibkeys=OCLC:" + oclcnumber + "&callback=ProcessResults");
+    document.documentElement.firstChild.appendChild(s);
+    //alert (api_url);
+}
+else if (isbnnumber.length > 0) {
+    var cburl = "http://books.google.com/books";
+    // Retrieve the info for these bibkeys
+    var api_url = cburl + "?jscmd=viewapi&bibkeys=ISBN:" + isbnnumber;
+    var s = document.createElement("script");
+    s.setAttribute("type", "text/javascript");
+    //alert("searching for: " + oclcnumber);
+    s.setAttribute("src", "http://books.google.com/books?jscmd=viewapi&bibkeys=ISBN:" + isbnnumber + "&callback=ProcessResults");
+    document.documentElement.firstChild.appendChild(s);
+    //alert (api_url);
+} else {
+    document.getElementById("googlebooks").innerHTML = "";
+}
+
+</script> 
+
 <!--{botlogo}-->
